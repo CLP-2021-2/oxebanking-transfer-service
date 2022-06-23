@@ -1,0 +1,48 @@
+<h1>Show Transfer</h1>
+
+<ul>
+
+  <li>
+    <strong>Docclienteorigem:</strong>
+    <%= @transfer.docClienteOrigem %>
+  </li>
+
+  <li>
+    <strong>Nomeclienteorigem:</strong>
+    <%= @transfer.nomeClienteOrigem %>
+  </li>
+
+  <li>
+    <strong>Docclientedestino:</strong>
+    <%= @transfer.docClienteDestino %>
+  </li>
+
+  <li>
+    <strong>Nomeclientedestino:</strong>
+    <%= @transfer.nomeClienteDestino %>
+  </li>
+
+  <li>
+    <strong>Valortransf:</strong>
+    <%= @transfer.valorTransf %>
+  </li>
+
+  <li>
+    <strong>Bancoorigem:</strong>
+    <%= @transfer.bancoOrigem %>
+  </li>
+
+  <li>
+    <strong>Bancodestino:</strong>
+    <%= @transfer.bancoDestino %>
+  </li>
+
+  <li>
+    <strong>Datahora:</strong>
+    <%= @transfer.dataHora %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.transfer_path(@conn, :edit, @transfer) %></span> |
+<span><%= link "Back", to: Routes.transfer_path(@conn, :index) %></span>

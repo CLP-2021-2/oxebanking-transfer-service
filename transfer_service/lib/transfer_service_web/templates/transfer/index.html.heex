@@ -1,0 +1,40 @@
+<h1>Listing Transfers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Docclienteorigem</th>
+      <th>Nomeclienteorigem</th>
+      <th>Docclientedestino</th>
+      <th>Nomeclientedestino</th>
+      <th>Valortransf</th>
+      <th>Bancoorigem</th>
+      <th>Bancodestino</th>
+      <th>Datahora</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for transfer <- @transfers do %>
+    <tr>
+      <td><%= transfer.docClienteOrigem %></td>
+      <td><%= transfer.nomeClienteOrigem %></td>
+      <td><%= transfer.docClienteDestino %></td>
+      <td><%= transfer.nomeClienteDestino %></td>
+      <td><%= transfer.valorTransf %></td>
+      <td><%= transfer.bancoOrigem %></td>
+      <td><%= transfer.bancoDestino %></td>
+      <td><%= transfer.dataHora %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.transfer_path(@conn, :show, transfer) %></span>
+        <span><%= link "Edit", to: Routes.transfer_path(@conn, :edit, transfer) %></span>
+        <span><%= link "Delete", to: Routes.transfer_path(@conn, :delete, transfer), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Transfer", to: Routes.transfer_path(@conn, :new) %></span>

@@ -1,0 +1,43 @@
+<.form let={f} for={@changeset} action={@action}>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :docClienteOrigem %>
+  <%= text_input f, :docClienteOrigem %>
+  <%= error_tag f, :docClienteOrigem %>
+
+  <%= label f, :nomeClienteOrigem %>
+  <%= text_input f, :nomeClienteOrigem %>
+  <%= error_tag f, :nomeClienteOrigem %>
+
+  <%= label f, :docClienteDestino %>
+  <%= text_input f, :docClienteDestino %>
+  <%= error_tag f, :docClienteDestino %>
+
+  <%= label f, :nomeClienteDestino %>
+  <%= text_input f, :nomeClienteDestino %>
+  <%= error_tag f, :nomeClienteDestino %>
+
+  <%= label f, :valorTransf %>
+  <%= number_input f, :valorTransf, step: "any" %>
+  <%= error_tag f, :valorTransf %>
+
+  <%= label f, :bancoOrigem %>
+  <%= text_input f, :bancoOrigem %>
+  <%= error_tag f, :bancoOrigem %>
+
+  <%= label f, :bancoDestino %>
+  <%= text_input f, :bancoDestino %>
+  <%= error_tag f, :bancoDestino %>
+
+  <%= label f, :dataHora %>
+  <%= datetime_select f, :dataHora %>
+  <%= error_tag f, :dataHora %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+</.form>
