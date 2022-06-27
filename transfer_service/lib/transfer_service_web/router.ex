@@ -19,6 +19,8 @@ defmodule TransferServiceWeb.Router do
 
     get "/", PageController, :index
     resources "/transfers", TransferController
+    resources "/transferspix", TransferPixController
+    resources "/transfers_ted_doc", Transfer_ted_docController
   end
 
   # Other scopes may use custom stacks.

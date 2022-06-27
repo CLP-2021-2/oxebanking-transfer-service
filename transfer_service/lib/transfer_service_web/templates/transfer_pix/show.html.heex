@@ -1,0 +1,18 @@
+<h1>Show Transfer pix</h1>
+
+<ul>
+
+  <li>
+    <strong>Chave:</strong>
+    <%= @transfer_pix.chave %>
+  </li>
+
+  <li>
+    <strong>Tipo:</strong>
+    <%= @transfer_pix.tipo %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.transfer_pix_path(@conn, :edit, @transfer_pix) %></span> |
+<span><%= link "Back", to: Routes.transfer_pix_path(@conn, :index) %></span>

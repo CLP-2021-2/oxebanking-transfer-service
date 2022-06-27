@@ -1,0 +1,28 @@
+<h1>Listing Transferspix</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Chave</th>
+      <th>Tipo</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for transfer_pix <- @transferspix do %>
+    <tr>
+      <td><%= transfer_pix.chave %></td>
+      <td><%= transfer_pix.tipo %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.transfer_pix_path(@conn, :show, transfer_pix) %></span>
+        <span><%= link "Edit", to: Routes.transfer_pix_path(@conn, :edit, transfer_pix) %></span>
+        <span><%= link "Delete", to: Routes.transfer_pix_path(@conn, :delete, transfer_pix), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Transfer pix", to: Routes.transfer_pix_path(@conn, :new) %></span>
