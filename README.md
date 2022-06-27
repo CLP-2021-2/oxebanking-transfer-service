@@ -12,7 +12,7 @@
 * Garanta que o postgre tenha as seguintes credenciais:
   * username: postgres
   * password: postgres
-  * database: "nome da database criada localmente"
+  * database: transfer_service_dev
 * mix ecto.create
 * mix ecto.migrate
 * mix phx.server
