@@ -13,6 +13,7 @@
   * username: postgres
   * password: postgres
   * database: transfer_service_dev
+  * trocar http: [127.0.0.1, port: 5432] para http: [port: 4000]
 * mix ecto.create
 * mix ecto.migrate
 * mix phx.server
