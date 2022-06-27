@@ -1,0 +1,5 @@
+<h1>New Transfer ted doc</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.transfer_ted_doc_path(@conn, :create)) %>
+
+<span><%= link "Back", to: Routes.transfer_ted_doc_path(@conn, :index) %></span>

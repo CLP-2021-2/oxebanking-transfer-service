@@ -1,0 +1,18 @@
+<h1>Show Transfer ted doc</h1>
+
+<ul>
+
+  <li>
+    <strong>Conta:</strong>
+    <%= @transfer_ted_doc.conta %>
+  </li>
+
+  <li>
+    <strong>Agencia:</strong>
+    <%= @transfer_ted_doc.agencia %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.transfer_ted_doc_path(@conn, :edit, @transfer_ted_doc) %></span> |
+<span><%= link "Back", to: Routes.transfer_ted_doc_path(@conn, :index) %></span>
