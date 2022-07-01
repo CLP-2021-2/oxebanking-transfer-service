@@ -13,7 +13,7 @@ defmodule TransferService.Transfers_ted_doc.Transfer_ted_doc do
   @doc false
   def changeset(transfer_ted_doc, attrs) do
     transfer_ted_doc
-    |> cast(attrs, [:conta, :agencia])
-    |> validate_required([:conta, :agencia])
+    |> cast(attrs, [:conta, :agencia, :transfer_id])
+    |> validate_required([:conta, :agencia, :transfer_id])
   end
 end

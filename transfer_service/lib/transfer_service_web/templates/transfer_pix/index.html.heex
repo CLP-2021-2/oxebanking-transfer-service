@@ -5,6 +5,7 @@
     <tr>
       <th>Chave</th>
       <th>Tipo</th>
+      <th>Transfer_id</th>
 
       <th></th>
     </tr>
@@ -14,6 +15,7 @@
     <tr>
       <td><%= transfer_pix.chave %></td>
       <td><%= transfer_pix.tipo %></td>
+      <td><%= transfer_pix.transfer_id %></td>
 
       <td>
         <span><%= link "Show", to: Routes.transfer_pix_path(@conn, :show, transfer_pix) %></span>
