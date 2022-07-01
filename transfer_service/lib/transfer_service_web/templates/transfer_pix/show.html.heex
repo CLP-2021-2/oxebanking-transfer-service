@@ -12,6 +12,11 @@
     <%= @transfer_pix.tipo %>
   </li>
 
+  <li>
+    <strong>Transfer_id:</strong>
+    <%= @transfer_pix.transfer_id %>
+  </li>
+
 </ul>
 
 <span><%= link "Edit", to: Routes.transfer_pix_path(@conn, :edit, @transfer_pix) %></span> |
