@@ -13,7 +13,7 @@ defmodule TransferService.TransfersPix.TransferPix do
   @doc false
   def changeset(transfer_pix, attrs) do
     transfer_pix
-    |> cast(attrs, [:chave, :tipo, :transfer_id])
-    |> validate_required([:chave, :tipo, :transfer_id])
+    |> cast(attrs, [:chave, :tipo])
+    |> validate_required([:chave, :tipo])
   end
 end
