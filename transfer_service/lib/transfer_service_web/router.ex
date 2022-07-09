@@ -26,17 +26,17 @@ defmodule TransferServiceWeb.Router do
   scope "/api", TransferServiceWeb do
     pipe_through :api
 
-    post "/transfers", TransferController, :create
-    put "/transfers/:id", TransferController, :update
-    delete "/transfers/:id", TransferController, :delete
+    post "/create_transfer", TransferController, :create
+    put "/update_transfer/:id", TransferController, :update
+    delete "/delete_transfer/:id", TransferController, :delete
 
-    post "/transferspix", TransferPixController, :create
-    put "/transferspix/:id", TransferPixController, :update
-    delete "/transferspix/:id", TransferPixController, :delete
+    post "/create_transferspix", TransferPixController, :create
+    put "/update_transferspix/:id", TransferPixController, :update
+    delete "/delete_transferspix/:id", TransferPixController, :delete
 
-    post "/transfers_ted_doc", Transfer_ted_docController, :create
-    put "/transfers_ted_doc/:id", Transfer_ted_docController, :update
-    delete "/transfers_ted_doc/:id", Transfer_ted_docController, :delete
+    post "/create_transfers_ted_doc", Transfer_ted_docController, :create
+    put "/update_transfers_ted_doc/:id", Transfer_ted_docController, :update
+    delete "/delete_transfers_ted_doc/:id", Transfer_ted_docController, :delete
   end
 
   # Other scopes may use custom stacks.
